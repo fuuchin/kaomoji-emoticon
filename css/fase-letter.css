@@ -1,0 +1,6 @@
+/*各cssの読み込み*/
+
+@import url("./page.css"); /*ページの構成についてのcss*/
+@import url("./area.css"); /*色々な表示欄の装飾*/
+@import url("./btn_input.css"); /*ボタンと入力欄の装飾*/
+@import url("./text.css"); /*文字の装飾*/

@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+}
+
+header {
+  background-image: url("./ftr.png"); /*背景画像 (^^)*/
+  background-size: 50px, 50px; /*画像サイズ*/
+}
+
+main {
+  background-image: url("./PC_face.jpg"); /*背景画像 PC*/
+}
+
+footer {
+  font-size: 30px;
+  font-weight: bold;
+  background-image: url("./hdr.png"); /*背景画像 ('∀`)*/
+  background-size: 50px, 50px; /*画像サイズ*/
+}

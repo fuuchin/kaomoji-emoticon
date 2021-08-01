@@ -1,0 +1,65 @@
+#face-letter-slot {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*使い方の装飾*/
+#face-letter-tutorial {
+  background: #aaffff;
+  justify-content: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  border-radius: 10px;
+}
+
+#li-1 {
+  border: none;
+  background: #ef9a05;
+}
+
+#li-2 {
+  border: none;
+  background: #efda04;
+}
+
+#li-3 {
+  border: none;
+  background: #9aef9a;
+}
+
+#li-4 {
+  border: none;
+  background: #9adeaa;
+}
+
+/*作られた顔文字の表示欄*/
+#slot-result {
+  background: #00ff00;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-right: 20%;
+  margin-left: 20%;
+  border-radius: 7px;
+}
+
+#result-area {
+  font-size: 45px;
+}
+
+/*登録する場所の装飾*/
+#face-letter-register {
+  background: #aaffff;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  margin: 50px 20% 0 20%;
+  border-radius: 7px;
+}
+
+form[name="radios"] {
+  background: #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 27%;
+  margin-left: 27%;
+  border-radius: 7px;
+}
