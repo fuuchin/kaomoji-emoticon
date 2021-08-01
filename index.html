@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>顔文字 制作</title>
+  <!-- Google Fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/fase-letter.css">
+</head>
+<body>
+  <header>
+    <h1>顔文字 制作!(^^)!</h1>
+  </header>
+
+  <main>
+    <div id="face-letter-slot">
+    <h1 id="h1-2">顔文字 制作!(^^)!</h1>
+    
+      <form name="radios">
+        <input type="radio" name="feel" id="random" value="random" checked>
+        <label for="random">ランダム</label>
+
+        <input type="radio" name="feel" id="happy" value="happy">
+        <label for="happy">喜び</label>
+
+        <input type="radio" name="feel" id="sad" value="sad">
+        <label for="sad">悲しみ</label>
+
+        <input type="radio" name="feel" id="angry" value="angry">
+        <label for="angry">怒り</label>
+      
+      </form>
+      <p><button id="face-letter-slot-btn">作成ボタン</button></p>
+      <p><button id="face-letter-tutorial-btn">使い方</button></p>
+      <div id="face-letter-tutorial" style="display: none;">
+        <p id="tutorial-1">ランダムに顔文字を作ってくれるボタンです。</p>
+        <p>
+          <dl>
+            <div id="li-1">
+                <dt id="li-1-1">りんかく</dt>
+                  <dd id="li-1-2">(), (())</dd>
+            </div>
+            <div id="li-2">
+                <dt id="li-2-1">目</dt>
+                  <dd id="li-2-2">^, ', T, ○, ◎, ゜, Φ, ￣, -, =など</dd>
+            </div>
+            <div id="li-3">
+                <dt id="li-3-1">口</dt>
+                  <dd id="li-3-2">空白, _, -, ∀, ▽, ω, з, o, v, Q, A, 人, へ, ∧ など</dd>
+            </div>
+            <div id="li-4">
+                <dt id="li-4-1">その他(右に付けます)</dt>
+                  <dd id="li-4-2">v, |, ノ゛, ☆ など</dd>
+            </div>
+          </dl>
+        </p>
+        <p>
+          変な顔文字が出てくるかもしれませんが、<br>
+          ここの部分がこう変わればいいんじゃない？と、<br>
+          <span class="reference">参考にはなる</span>と思います。
+        </p>
+        <p>
+          <button id="close-btn">閉じる</button>
+        </p>
+      </div>
+
+      <div id="slot-result">
+        <div id="result-area">
+          どんな顔文字が出るかな?<br>
+          ? (???) ?
+        </div>
+      </div>
+      
+    </div>
+
+    <div id="face-letter-register">
+      <h1>顔文字 登録( ^^) _U~~</h1>
+      <p>登録したい顔文字を入力します</p>
+      <p>※顔文字は一つずつ登録することを推奨</p>
+      <input type="text" id="face-letter-txt" placeholder="登録したい顔文字を入力">
+      <p>保存したいファイル名を指定してください(拡張子はつけなくていいです)</p>
+      <input type="text" id="register-name" placeholder="ファイル名">
+      <button id="register-btn">登録</button>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; ふーちん 2021</small><br>
+    <small>N予備校 動くWebページコンテスト2021夏</small><br>
+    <small>顔文字 制作!(^^)!</small>
+  </footer>
+  <script src="js/face-letter.js"></script>
+  <script src="js/btn.js"></script>
+</body>
+</html>
