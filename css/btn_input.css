@@ -2,7 +2,7 @@
 #face-letter-slot-btn { /*作成ボタン*/
   padding: 20px 30px; /*上下 左右 の順*/
   font-size: 2rem;
-  border: 3px double #009900;
+  border: 5px double #009900;
   background: #00ff00 ;
   font-family: 'Yusei Magic', sans-serif; /*Google Fonts*/
 }
@@ -11,7 +11,7 @@
   padding: 8px;
   color: #fff;
   font-size: .8rem;
-  border: 3px double #000099;
+  border: 4px double #000099;
   background: #0000ff ;
 }
 
@@ -20,14 +20,14 @@
   padding: 8px;
   color: #fff;
   font-size: .8rem;
-  border: 3px double #000099;
+  border: 4px double #000099;
   background: #0000ff ;
 }
 
 #register-btn { /*参考ボタン, キープボタン*/
   color: #fdffff;
   padding: 5px 10px;
-  border: 3px double #3151cf;
+  border: 4px double #3151cf;
   border-radius: 2px;
   background: #3191cf;
   font-size: 20px;
