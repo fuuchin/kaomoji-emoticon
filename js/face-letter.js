@@ -17,19 +17,13 @@ closeBtn.onclick = () => {
   //クリックされたかどうか次第で 表示するかしないか決まる
 }
 
-
-
 let faceLetterTxt = id('face-letter-txt'); //登録したい顔文字の入力欄
 
 function save() {
-  if (!faceLetterTxt) {
-    return;
-  }
-
   // 文字列をBlob化 (データ型の一つ)
   const blob = new Blob([faceLetterTxt.value], { type: 'text/plain' });
 
-  
+
   // ダウンロード用のaタグを作る
   const a = document.createElement('a');
   a.href =  URL.createObjectURL(blob);
@@ -43,6 +37,20 @@ registerBtn.onclick = () => {
   save(); //save関数の実行
 }
 
+const registerFile = id('register-name');
+registerBtn.disabled = true;
+
+
+if (registerFile.value.length === 0) {
+  registerBtn.style.display = "inline";
+} else {
+  registerBtn.style.display = "none";
+}
+
+
+
+
+
 let slotAnswers = {
   contour1: [ //contour  英語の「りんかく」左側
     '(', '(', '(', '(', '(('
@@ -53,18 +61,16 @@ let slotAnswers = {
   ],
 
   eye: [ //eye 英語の「目」
-    '^', '^', '^', '^', '\'', '\'', '\`', '\"', '*', '*', ';', 'O', 'T', '○', '○', '◎', '◎', '⌒', '゜', '゜', '゜', '゜', 'Φ', '￣', '￥', '・', '-', '=', '@', '@', '_', '+', '▼'
+    '^', '^', '^', '^', '\'', '\'', '\`', '\"', '*', '*', ';', 'O', 'T', '○', '○', '◎', '◎', '⌒', '゜', '゜', ' ゜', '゜', 'Φ', '￣', '￥', '・', '-', '=', '@', '@', '_', '+', '▼'
   ],
-
   mouth: [ //mouth 英語の「口」
-     ' ', '_', '-', 'o', 'o', 'o', 'v', 'v', 'v', 'Q', 'A', '∀', '▽', 'Д', 'ω', 'з', 'ε', '∧', '人', '人', '人', 'へ'
+    ' ', '_', '-', 'o', 'o', 'o', 'v', 'v', 'v', 'Q', 'A', '∀', '▽', 'Д', 'ω', 'з', 'ε', '∧', '人', '人', '人  ', 'へ'
   ],
 
   others: [ //右側につける何か
     '/', '/', '/', '/', '|', 'ノ゛', 'v', 'v', 'v', 'V', 'zzZZ', 'b', 'b', '☆', '★'
   ]
 };
-
 
 
 const feel = document.getElementsByName('feel');
@@ -80,10 +86,10 @@ feel[0].onclick = () => { //ランダム
     ],
   
     eye: [
-      '^', '^', '^', '^', '\'', '\'', '\`', '\"', '*', '*', ';', 'O', 'T', '○', '○', '◎', '◎', '⌒', '゜', '゜', '゜', '゜', 'Φ', '￣', '￥', '・', '-', '=', '@', '@', '_', '+', '▼'
+      '^', '^', '^', '^', '\'', '\'', '\`', '\"', '*', '*', ';', 'O', 'T', '○', '○', '◎', '◎', '⌒', '゜', '゜',   '゜', '゜', 'Φ', '￣', '￥', '・', '-', '=', '@', '@', '_', '+', '▼'
     ],
     mouth: [
-       ' ', '_', '-', 'o', 'o', 'o', 'v', 'v', 'v', 'Q', 'A', '∀', '▽', 'Д', 'ω', 'з', 'ε', '∧', '人', '人', '人', 'へ'
+       ' ', '_', '-', 'o', 'o', 'o', 'v', 'v', 'v', 'Q', 'A', '∀', '▽', 'Д', 'ω', 'з', 'ε', '∧', '人', '人', '人  ', 'へ'
     ],
   
     others: [
@@ -92,17 +98,24 @@ feel[0].onclick = () => { //ランダム
   };
 }
 
+
 feel[1].onclick = () => { //喜び
   slotAnswers.eye = ['^', '^', '￥', '⌒'];
   slotAnswers.mouth = ['', ' ', '-', 'v', 'o', 'Q', '∀', 'Д', 'ω', '人', 'へ', '_'];
   slotAnswers.others = ['/', '|', 'ノ゛', 'v', 'V', 'b', '☆', '★'];
 }
 
+
 feel[2].onclick = () => { //悲しみ
+
   slotAnswers.eye = ['T', 'T', 'T', 'Y', 'Y', 'Y', ';', ';', '/', '┬', '┬┬'];
+
   slotAnswers.mouth = [' ', '_', '_', '_', 'Д', 'Д', 'Д', 'o', 'o', 'o', 'O'];
+
   slotAnswers.others = ['', '', 'ノ'];
+
 }
+
 
 feel[3].onclick = () => { //怒り
   slotAnswers.contour1 = ['(', '(', '(', '((', '(#'];
@@ -112,39 +125,38 @@ feel[3].onclick = () => { //怒り
   slotAnswers.others = ['', '', 'ノ'];
 }
 
+
 /**
- * TODO びっくり
- *      真顔
- *      謝り
- *      困る
- *      呆れ
- */
+* TODO びっくり
+*      真顔
+*      謝り
+*      困る
+*      呆れ
+*      英語バージョン :) など
+*/
+
 
 const slotBtn = id('face-letter-slot-btn');
+
 let slotResult = [];
 
 slotBtn.onclick = () => {
+  slotResult.length = 0; //配列の中身をクリア
   //ランダムに指定したのを配列に入れる
-  slotResult.push(slotAnswers.contour1[(Math.floor(Math.random() * slotAnswers.contour1.length)) % slotAnswers.contour1.length]);
+  slotResult.push(slotAnswers.contour1[(Math.floor(Math.random() * slotAnswers.contour1.length)) % slotAnswers. contour1.length]);
+  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]  );
+  slotResult.push(slotAnswers.mouth[(Math.floor(Math.random() * slotAnswers.mouth.length)) % slotAnswers.mouth. length]);
+  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]  );
+  slotResult.push(slotAnswers.contour2[(Math.floor(Math.random() * slotAnswers.contour2.length)) % slotAnswers. contour2.length]);
+  slotResult.push(slotAnswers.others[(Math.floor(Math.random() * slotAnswers.others.length)) % slotAnswers. others.length]);
 
-  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]);
-
-  slotResult.push(slotAnswers.mouth[(Math.floor(Math.random() * slotAnswers.mouth.length)) % slotAnswers.mouth.length]);
-
-  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]);
-
-  slotResult.push(slotAnswers.contour2[(Math.floor(Math.random() * slotAnswers.contour2.length)) % slotAnswers.contour2.length]);
-
-  slotResult.push(slotAnswers.others[(Math.floor(Math.random() * slotAnswers.others.length)) % slotAnswers.others.length]);
-
-  
   const result = slotResult.join(''); //配列に入れられた顔のパーツを足し合わせる
   id('result-area').innerHTML = result; //結果を表示
   faceLetterTxt.value = result; //登録したい顔文字入力欄に自動入力
-  slotResult.length = 0; //表示した後に配列の中身をクリア
+
+  const bgm = new Audio();
+  bgm.preload = "auto";
+  bgm.src = './appear.mp3';
+  bgm.currentTime = 0; //再生開始位置を先頭に戻す
+  bgm.play();
 }
-
-
-
-
-
