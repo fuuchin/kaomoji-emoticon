@@ -1,41 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>顔文字制作!(^^)! について</title>
-  <link rel="shortcut icon" href="./logo.png">
+ <meta charset="UTF-8">
+ <meta name="twitter:card" content="summary" />
+ <meta property="og:url" content="https://fuuchin.github.io/kaomoji-emoticon/index.html" />
+ <meta property="og:title" content="顔文字制作!(^^)!" />
+ <meta property="og:description" content="N予備校 動くWEBページコンテスト2021夏で制作した作品の、「顔文字制作!(^^)!」です。" />
+ <meta property="og:image" content="./image/ogp-image.png">
+ 
+ <title>顔文字 制作!(^^)!</title>
+ <link rel="shortcut icon" href="./logo.png">
+ 
+ <!-- Google Fontsの読み込み -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/kaomoji-emoticon.css">
+ <link rel="stylesheet" href="css/fase-letter.css">
 </head>
 <body>
+  <header>
+  <h1>
+    <a href="./logo.png" target="_blank" id="head-logo"><img src="logo.png" alt="顔文字制作!(^^)!のロゴ" width="130px">
+    </a>
+    顔文字 制作!(^^)!
+  </h1>
+  <a href="kaomoji-emoticon.html" id="how-to-use">このページについて</a>
+  <a href="https://github.com/fuuchin" id="how-to-use">制作者</a>
+  </header>
+ 
+  <main>
+  <div id="face-letter-slot">
+  <h1 id="h1-2">顔文字 制作!(^^)!</h1>
   
-  <a href="index.html" target="_blank" id="head-logo"><img src="logo.png" alt="顔文字制作!(^^)!のロゴ" width="215px">
-  <h1><a href="index.html">顔文字制作!(^^)!</a> について</h1>
-
-  <h2>概要</h2>
-  <p>顔文字制作!(^^)! は、<a href="https://github.com/fuuchin" target="_blank">ふーちん</a>が制作しました。</p>
-  <p>顔文字制作!(^^)! は、「N予備校動くWebページコンテスト夏2021」の出品作品です。</p>
+  <form name="radios">
+  <input type="radio" name="feel" id="random" value="random" checked>
+  <label for="random">ランダム</label>
+ 
+  <input type="radio" name="feel" id="happy" value="happy">
+  <label for="happy">喜び</label>
+ 
+  <input type="radio" name="feel" id="sad" value="sad">
+  <label for="sad">悲しみ</label>
+ 
+  <input type="radio" name="feel" id="angry" value="angry">
+  <label for="angry">怒り</label>
+  
+  </form>
+  <p><button id="face-letter-slot-btn">作成ボタン</button></p>
+  <p><button id="face-letter-tutorial-btn">概要</button></p>
+  <div id="face-letter-tutorial" style="display: none;">
+  <p id="tutorial-1">ランダムに顔文字を作ってくれるボタンです。</p>
   <p>
-    こんな顔文字があったらいいなぁということがあると思いますが、<br>
-    ネットで調べても思ったのがなかったり、文字化けしそうなものがあったりして、結局使わないことがあるかもしれません。
+  <dl>
+  <div id="li-1">
+  <dt id="li-1-1">りんかく</dt>
+  <dd id="li-1-2">(), (())</dd>
+  </div>
+  <div id="li-2">
+  <dt id="li-2-1">目</dt>
+  <dd id="li-2-2">^, ', T, ○, ◎, ゜, Φ, ￣, -, = など</dd>
+  </div>
+  <div id="li-3">
+  <dt id="li-3-1">口</dt>
+  <dd id="li-3-2">空白, _, -, ∀, ▽, ω, з, o, v, Q, A, 人, へ, ∧ など</dd>
+  </div>
+  <div id="li-4">
+  <dt id="li-4-1">その他(右に付けます)</dt>
+  <dd id="li-4-2">v, |, ノ゛, zzZZ など</dd>
+  </div>
+  </dl>
   </p>
-  <p>このサイトでは、完全ランダムと、気もちごとの中でのランダムがあります。</p>
-  <p>機種依存文字は、使っておりません。</p>
-  <p>気に入った顔文字は、txtファイルでダウンロードできます。</p>
-
-  <h2>使い方</h2>
-  <p><a href="https://github.com/fuuchin/kaomoji-emoticon/wiki/how-to-use" target="_blank">こちら</a>のページで確認できます。</p>
-
-  <h2>ライセンス</h2>
-  <p>パソコンの画像は<a href="https://www.irasutoya.com/" target="_blank">いらすとや</a>さん、顔文字の画像は<a href="https://www.ac-illust.com/" target="_blank">イラストAC</a>さんから使用させて頂きました。</p>
-  <p>フォントは<a href="https://fonts.google.com/" target="_blank">Google font</a>を使用させて頂きました。</p>
-  <p>フォント名:M PLUS Rounded 1c, Yusei Magic</p>
-  <p>ロゴは Microsoft Wordさん、ペイントさん、ペイント3Dさんを使用して制作しました。</p>
-
-  <h2>連絡先</h2>
-  <p>progedu <a href="https://slack.com/intl/ja-jp/">slack</a>の「@怪しいトリのふーちん OOックマも」まで</p>
-
+  <p>
+  変な顔文字が出てくるかもしれませんが、<br>
+  ここの部分がこう変わればいいんじゃない？と、<br>
+  <span class="reference">参考にはなる</span>と思います。
+  </p>
+  <p>※この一覧は、ランダムの場合です</p>
+  <p>
+  <button id="close-btn">閉じる</button>
+  </p>
+  </div>
+ 
+  <div id="slot-result">
+  <div id="result-area">
+  どんな顔文字が出るかな?<br>
+  ? (???) ?
+  </div>
+  </div>
+  
+  </div>
+ 
+  <div id="face-letter-register">
+  <h1>顔文字 登録( ^^) _U~~</h1>
+  <p>まず、登録したい顔文字を入力します</p>
+  <p>※顔文字は一つずつ登録することを推奨</p>
+  <input type="text" id="face-letter-txt" placeholder="登録したい顔文字を入力">
+  <p>次に、保存したいファイル名を指定してください(拡張子はつけなくていいです)</p>
+  <input type="text" id="register-name" placeholder="ファイル名">
+  <button id="register-btn" disabled>登録</button>
+  </div>
+  </main>
+ 
+  <footer>
+    <!-- <div id="smalls"> -->
+      <small>&copy; ふーちん 2021</small><br>
+      <small>N予備校 動くWebページコンテスト2021夏</small><br>
+      <small>顔文字 制作!(^^)!
+        <a href="./logo.png" target="_blank"><img src="logo.png" alt="顔文字制作!(^^)!のロゴ" width="40px">
+        </a>
+      </small>
+    <!-- </div> -->
+  </footer>
+  <script src="js/face-letter.js"></script>
+  <script src="js/btn.js"></script>
 </body>
 </html>
