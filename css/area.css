@@ -5,6 +5,7 @@
 
 /*使い方の装飾*/
 #face-letter-tutorial {
+  padding-top: 5px;
   background: #aaffff;
   justify-content: center;
   margin-right: 20%;
@@ -63,3 +64,9 @@ form[name="radios"] {
   margin-left: 27%;
   border-radius: 7px;
 }
+
+/* #smalls {
+  margin: 0 30%;
+  background: rgba(255, 90, 0, 0.363);
+  border-radius: 30px;
+} */
