@@ -37,15 +37,6 @@ registerBtn.onclick = () => {
   save(); //save関数の実行
 }
 
-const registerFile = id('register-name');
-registerBtn.disabled = true;
-
-
-if (registerFile.value.length === 0) {
-  registerBtn.style.display = "inline";
-} else {
-  registerBtn.style.display = "none";
-}
 
 
 
@@ -153,10 +144,4 @@ slotBtn.onclick = () => {
   const result = slotResult.join(''); //配列に入れられた顔のパーツを足し合わせる
   id('result-area').innerHTML = result; //結果を表示
   faceLetterTxt.value = result; //登録したい顔文字入力欄に自動入力
-
-  const bgm = new Audio();
-  bgm.preload = "auto";
-  bgm.src = './appear.mp3';
-  bgm.currentTime = 0; //再生開始位置を先頭に戻す
-  bgm.play();
 }
