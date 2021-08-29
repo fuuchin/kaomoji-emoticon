@@ -65,6 +65,14 @@ form[name="radios"] {
   border-radius: 7px;
 }
 
+article {
+  background: #aafecc;
+  border-radius: 7px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 50px 20% 0 20%;
+}
+
 /* #smalls {
   margin: 0 30%;
   background: rgba(255, 90, 0, 0.363);
