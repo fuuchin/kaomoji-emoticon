@@ -1,0 +1,96 @@
+input[type="text"] {
+  width: 50%;
+  height: 2.5rem;
+  border: 2px solid #3151cf;
+  border-radius: 5px;
+  min-height: 1rem;
+  font-size: 1.2rem;
+  /* 影 */
+  box-shadow: 2px 2px 2px #000;
+  transition: 700ms;
+}
+
+input[type="text"]:focus {
+  /*入力欄にフォーカスしたときに*/
+  border: 2px solid #0141ef;
+  outline: 0;
+  /* 影を消す */
+  box-shadow: none;
+  transform: translate(1px, 2px);
+}
+
+input[type="text"]::placeholder, textarea::placeholder{
+  transition: 300ms;
+  color: #aab;
+}
+
+input[type="text"]:focus::placeholder, textarea:focus::placeholder{
+  /*入力欄にフォーカスしたときにplaceholderが右にアニメーションします。 */
+  transform: translateX(40px);
+  opacity: 0;
+}
+textarea {
+  width: 80%;
+  height: 200px;
+  border: 2px solid #3151cf;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  /* 影 */
+  box-shadow: 2px 2px 2px #000;
+  transition: 700ms;
+}
+
+textarea:focus {
+  /*入力欄にフォーカスしたときに*/
+  border: 2px solid #0141ef;
+  outline: 0;
+  /* 影を消す */
+  box-shadow: none;
+  transform: translate(1px, 2px);
+}
+
+
+
+
+input[type="radio"] {
+  font-size: 10px;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+input[type="radio"] + label{
+  font-size: 20px;
+  padding-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+input[type="radio"] + label:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  transform: translate(0, 5px);
+}
+
+
+input[type="radio"]:checked + label:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 9px;
+  height: 9px;
+  background: #41487e;
+  border-radius: 50%;
+  transform: translate(0, 5px);
+}

@@ -1,0 +1,42 @@
+
+#face-letter-slot-btn { /*作成ボタン*/
+  padding: 20px 30px; /*上下 左右 の順*/
+  font-size: 2rem;
+  border: 5px double #009900;
+  background: #00ff00 ;
+  font-family: 'Yusei Magic', sans-serif; /*Google Fonts*/
+}
+
+#face-letter-tutorial-btn { /*使い方ボタン*/
+  padding: 8px;
+  color: #fff;
+  font-size: .8rem;
+  border: 4px double #000099;
+  background: #0000ff ;
+}
+
+#close-btn { /*使い方を閉じるボタン*/
+  margin: 10px;
+  padding: 8px;
+  color: #fff;
+  font-size: .8rem;
+  border: 4px double #000099;
+  background: #0000ff ;
+}
+
+#register-btn { /*参考ボタン, キープボタン*/
+  color: #fdffff;
+  padding: 5px 10px;
+  border: 4px double #3151cf;
+  border-radius: 2px;
+  background: #3191cf;
+  font-size: 20px;
+  /* 影 */
+  box-shadow: 5px 5px 2px #000;
+  transition: 500ms;
+}
+
+#register-btn:hover { /*参考ボタン, キープボタン をホバー*/
+  background: #000090;
+}
+
