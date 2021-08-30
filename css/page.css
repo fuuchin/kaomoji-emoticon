@@ -3,17 +3,28 @@ body {
 }
 
 header {
-  background-image: url("./hdr.png"); /*背景画像 (^^)*/
-  background-size: 50px, 50px; /*画像サイズ*/
+  padding-bottom: 18px;
+  background: linear-gradient(45deg, #00ff90, #0060df);
+}
+
+#line-1 {
+  height: 50px;
+  background-image: url("./hdr.png"); /* 背景画像 (^^) */
+  background-size: 50px, 50px; /* 画像サイズ */
 }
 
 main {
-  background-image: url("./PC_face.jpg"); /*背景画像 PC*/
+  background: linear-gradient(255deg, #00ff90, #0060df);
+}
+
+#line-2 {
+  height: 50px;
+  background-image: url("./ftr.png"); /* 背景画像 (^^) */
+  background-size: 50px, 50px; /* 画像サイズ */
 }
 
 footer {
   font-size: 30px;
   font-weight: bold;
-  background-image: url("./ftr.png"); /*背景画像 ('∀`)*/
-  background-size: 50px, 50px; /*画像サイズ*/
+  background: linear-gradient(155deg, #00ff90, #0060df);
 }
