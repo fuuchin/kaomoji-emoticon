@@ -18,18 +18,16 @@ closeBtn.onclick = () => {
 }
 
 let faceLetterTxt = id('face-letter-txt'); //登録したい顔文字の入力欄
-
 function save() {
   // 文字列をBlob化 (データ型の一つ)
   const blob = new Blob([faceLetterTxt.value], { type: 'text/plain' });
 
-
   // ダウンロード用のaタグを作る
   const a = document.createElement('a');
   a.href =  URL.createObjectURL(blob);
-  const registerName = id('register-name').value;
+  const registerName = id('register-name').value; // ファイル名
   a.download = registerName + '.txt';
-  a.click();
+  a.click(); // 作成したダウンロード用のaタグをjavascript上でクリックする
 }
 
 const registerBtn = id('register-btn');
@@ -37,10 +35,11 @@ registerBtn.onclick = () => {
   save(); //save関数の実行
 }
 
-
-
-
-
+function scrollAuto(){ // 登録したい顔文字の入力欄の自動スクロールをする関数
+  if(faceLetterTxt.selectionStart === faceLetterTxt.selectionEnd) {
+     faceLetterTxt.scrollTop = faceLetterTxt.scrollHeight;
+  }
+}
 
 let slotAnswers = {
   contour1: [ //contour  英語の「りんかく」左側
@@ -130,18 +129,26 @@ feel[3].onclick = () => { //怒り
 const slotBtn = id('face-letter-slot-btn');
 
 let slotResult = [];
+let downloadArea = [];
 
 slotBtn.onclick = () => {
   slotResult.length = 0; //配列の中身をクリア
-  //ランダムに指定したのを配列に入れる
-  slotResult.push(slotAnswers.contour1[(Math.floor(Math.random() * slotAnswers.contour1.length)) % slotAnswers. contour1.length]);
-  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]  );
-  slotResult.push(slotAnswers.mouth[(Math.floor(Math.random() * slotAnswers.mouth.length)) % slotAnswers.mouth. length]);
-  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]  );
-  slotResult.push(slotAnswers.contour2[(Math.floor(Math.random() * slotAnswers.contour2.length)) % slotAnswers. contour2.length]);
-  slotResult.push(slotAnswers.others[(Math.floor(Math.random() * slotAnswers.others.length)) % slotAnswers. others.length]);
+  //ランダムに指定した顔文字のパーツを配列に入れる
+  slotResult.push(slotAnswers.contour1[(Math.floor(Math.random() * slotAnswers.contour1.length)) % slotAnswers. contour1.length]); // りんかく 左側
+
+  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]  ); // 目
+
+  slotResult.push(slotAnswers.mouth[(Math.floor(Math.random() * slotAnswers.mouth.length)) % slotAnswers.mouth. length]); // 口
+
+  slotResult.push(slotAnswers.eye[(Math.floor(Math.random() * slotAnswers.eye.length)) % slotAnswers.eye.length]  ); // 目
+
+  slotResult.push(slotAnswers.contour2[(Math.floor(Math.random() * slotAnswers.contour2.length)) % slotAnswers. contour2.length]); // りんかく 右側
+
+  slotResult.push(slotAnswers.others[(Math.floor(Math.random() * slotAnswers.others.length)) % slotAnswers. others.length]); // つけるもの
 
   const result = slotResult.join(''); //配列に入れられた顔のパーツを足し合わせる
   id('result-area').innerHTML = result; //結果を表示
-  faceLetterTxt.value = result; //登録したい顔文字入力欄に自動入力
+  downloadArea.push(result + '\n')
+  faceLetterTxt.innerHTML = downloadArea.join(""); //登録したい顔文字入力欄に自動入力
+  scrollAuto(); // 登録したい顔文字の入力欄の自動スクロール
 }
