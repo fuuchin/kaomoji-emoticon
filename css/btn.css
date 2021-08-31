@@ -24,7 +24,7 @@
   background: #0000ff ;
 }
 
-#register-btn { /*参考ボタン, キープボタン*/
+#register-btn, #reset, #copy { /*参考ボタン, キープボタン*/
   color: #fdffff;
   padding: 5px 10px;
   border: 4px double #3151cf;
@@ -34,9 +34,10 @@
   /* 影 */
   box-shadow: 5px 5px 2px #000;
   transition: 500ms;
+  margin-right: 10px;
 }
 
-#register-btn:hover { /*参考ボタン, キープボタン をホバー*/
+#register-btn:hover, #reset:hover, #copy:hover { /*参考ボタン, キープボタン をホバー*/
   background: #000090;
 }
 
