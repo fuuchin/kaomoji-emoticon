@@ -56,6 +56,7 @@
   border-radius: 7px;
 }
 
+/*顔文字の種類の切り替え*/
 form[name="radios"] {
   background: #ddd;
   padding-top: 20px;
@@ -67,6 +68,7 @@ form[name="radios"] {
   padding-right: 100px;
 }
 
+/*今日の顔文字*/
 article {
   background: #aafecc;
   border-radius: 7px;
