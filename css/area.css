@@ -63,6 +63,8 @@ form[name="radios"] {
   margin-right: 22%;
   margin-left: 22%;
   border-radius: 7px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 article {
