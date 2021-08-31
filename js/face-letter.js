@@ -149,9 +149,19 @@ slotBtn.onclick = () => {
   const result = slotResult.join(''); //配列に入れられた顔のパーツを足し合わせる
   id('result-area').innerHTML = result; //結果を表示
 
-  downloadArea.push(result + '\n') // textareaに露図けて表示したいのでクリアしない別の配列
+  downloadArea.push(result + '\n') // textareaに続けて表示したいのでクリアしない別の配列
   let downloadTxtarea = downloadArea.join(""); //登録したい顔文字入力欄に自動入力
   faceLetterTxt.innerHTML = downloadTxtarea;
   scrollAuto(); // 登録したい顔文字の入力欄の自動スクロール
 }
 
+faceLetterTxt.oninput = () => {
+  slotBtn.style.display = 'none';
+}
+
+let copyBtn = id('copy');
+copyBtn.onclick = () => {
+  copy();
+}
+
+console.log('%cコピーボタンは時間がなくて未実装', 'color: red; font-weight: bold; font-size: large')
