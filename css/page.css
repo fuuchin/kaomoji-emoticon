@@ -28,10 +28,3 @@ footer {
   font-weight: bold;
   background: linear-gradient(155deg, #00ff90, #0060df);
 }
-
-@media screen and (min-width: 481px) {
-  form [name="radios"] {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
