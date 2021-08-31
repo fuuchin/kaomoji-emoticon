@@ -128,8 +128,8 @@ feel[3].onclick = () => { //怒り
 
 const slotBtn = id('face-letter-slot-btn');
 
-let slotResult = [];
-let downloadArea = [];
+let slotResult = []; // 結果は1つだけ表示するのでクリアする配列
+let downloadArea = []; // クリアしない別の配列
 
 slotBtn.onclick = () => {
   slotResult.length = 0; //配列の中身をクリア
@@ -148,7 +148,10 @@ slotBtn.onclick = () => {
 
   const result = slotResult.join(''); //配列に入れられた顔のパーツを足し合わせる
   id('result-area').innerHTML = result; //結果を表示
-  downloadArea.push(result + '\n')
-  faceLetterTxt.innerHTML = downloadArea.join(""); //登録したい顔文字入力欄に自動入力
+
+  downloadArea.push(result + '\n') // textareaに露図けて表示したいのでクリアしない別の配列
+  let downloadTxtarea = downloadArea.join(""); //登録したい顔文字入力欄に自動入力
+  faceLetterTxt.innerHTML = downloadTxtarea;
   scrollAuto(); // 登録したい顔文字の入力欄の自動スクロール
 }
+
