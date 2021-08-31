@@ -164,4 +164,4 @@ copyBtn.onclick = () => {
   copy();
 }
 
-console.log('%cコピーボタンは時間がなくて未実装', 'color: red; font-weight: bold; font-size: large')
+console.log('%cコピーボタンは時間がなくて未実装', 'color: red; font-weight: bold; font-size: large');
