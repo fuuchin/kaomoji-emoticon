@@ -87,22 +87,25 @@
   <div id="result-area">
   どんな顔文字が出るかな?<br>
   ? (???) ?
+
   </div>
   </div>
-  
+    <button id="copy">コピー</button>コピーボタンは時間がなくて未実装
   </div>
  
   <div id="face-letter-register">
   <h1>顔文字 登録( ^^) _U~~</h1>
-  <p>まず、登録したい顔文字を入力します</p>
-  <p>※顔文字は一つずつ登録することを推奨</p>
-  <textarea id="face-letter-txt" placeholder="登録したい顔文字を入力" cols="50"></textarea>
+  <p>まず、出てきた顔文字のうち気に入らない顔文字を削除します。</p>
+  <p>(削除したら作成ボタンは押せなくなります。)</p>
+  <textarea id="face-letter-txt" placeholder="気に入らない顔文字を削除" cols="50"></textarea>
   <p>次に、保存したいファイル名を指定してください(拡張子はつけなくていいです)</p>
   <input type="text" id="register-name" placeholder="ファイル名">
   <button id="register-btn">登録</button>
+  <button id="reset">リセット</button>
   <p>(スマホ版だと機種依存文字ではなくても文字化けする可能性があります)</p>
+  <p>再度顔文字を登録するにはリセットボタンを押します。</p>
   <!-- ツイートボタン -->
-  <a href="https://twitter.com/intent/tweet?button_hashtag=気に入った顔文字&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="meが気に入った顔文字は、" data-url="https://kenton116.github.io/Favorite-PictureViewer/main.html" data-show-count="false">Tweet #気に入った顔文字</a>
+  <a href="https://twitter.com/intent/tweet?button_hashtag=気に入った顔文字&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="meが気に入った顔文字は、" data-show-count="false">Tweet #気に入った顔文字</a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   </div>
