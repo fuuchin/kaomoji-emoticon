@@ -1,4 +1,4 @@
-const DaysKamoji = [
+const DaysKamoji = [ // 今日の顔文字の結果一覧の配列
   { kaomoji: '(__)...。oo○゜', title: '爆睡'},
   { kaomoji: 'ー(^^)＝(^^)＝(^^)ー', title: '肩を組む'},
   { kaomoji: '(^^)- - - - - -(^^)', title: 'テレパシー'},
@@ -14,9 +14,9 @@ const DaysKamoji = [
 ];
 
 todayKamoji = () => {
-  const dayNum = new Date().getDate();
-  const index = dayNum % DaysKamoji.length;
-  const result = DaysKamoji[index];
+  const dayNum = new Date().getDate(); // 日付を取得
+  const index = dayNum % DaysKamoji.length; // 日付の値を配列の長さで割る
+  const result = DaysKamoji[index]; // index番目の顔文字にすることでその日の今日の顔文字はずっと決まった顔文字になる
   return result;
 }
 
@@ -24,25 +24,26 @@ const kaomojiTitle = id('kaomoji-title');
 const kaomojiResult = id('today-kaomoji');
 
 const today = new Date();
-const year = today.getFullYear();
+const year = today.getFullYear(); // 年を取得(2021年)
 const month = today.getMonth() + 1; // 月は0から数えてしまうので1を足す
-const day = today.getDate();
-const dayofweek = today.getDay();
+const day = today.getDate(); // 日にちを取得
+const dayofweek = today.getDay(); // 曜日を取得(0~6で 0は日曜日、6は土曜日)
 
 dateExpression = () => {
-  const dayname = ['日', '月', '火', '水', '木', '金', '土'];
+  const dayname = ['日', '月', '火', '水', '木', '金', '土']; // 曜日は番号で取得するので配列が必要
   const result = (`${year}年${month}月${day}日(${dayname[dayofweek]})`);
   return result;
 }
 
 const todayArea = id('today');
-todayArea.innerHTML = dateExpression();
+todayArea.innerHTML = dateExpression(); // 今日の日付
 
 let titleKaomoji = todayKamoji().title
 let resultKaomoji = todayKamoji().kaomoji;
 
 
 // 特定の日だけに特定の顔文字
+// その日にしか見れない貴重な顔文字
 if (month === 1 && day === 1) { // 1月1日には元旦の顔文字
   titleKaomoji = '元日';
   resultKaomoji = '__○__  |(^^)| Happy new year!!';
@@ -73,5 +74,6 @@ if (month === 12 && (day === 24 || day == 25)) {
   resultKaomoji = '☆<br>／＼<br>／||＼<br>／_||_＼<br>__||__<br>(^^) |　||　| (^^)'; // ツリー
 }
 
+// 表示
 kaomojiTitle.innerHTML = titleKaomoji;
 kaomojiResult.innerHTML = resultKaomoji;
