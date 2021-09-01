@@ -29,6 +29,7 @@ input[type="text"]:focus::placeholder, textarea:focus::placeholder{
   transform: translateX(40px);
   opacity: 0;
 }
+
 textarea {
   width: 80%;
   height: 200px;
@@ -51,13 +52,13 @@ textarea:focus {
 }
 
 
-
+/*ラジオボタンの装飾*/
 
 input[type="radio"] {
   font-size: 10px;
 }
 
-input[type="radio"]{
+input[type="radio"]{ /*ラジオボタンを一旦非表示にしてから丸を描くことで色などを変えられる*/
   display: none;
 }
 
@@ -68,7 +69,7 @@ input[type="radio"] + label{
   position: relative;
 }
 
-input[type="radio"] + label:before{
+input[type="radio"] + label:before{ /*beforeはラジオボタンが選択される前*/
   content: "";
   display: block;
   position: absolute;
@@ -82,7 +83,7 @@ input[type="radio"] + label:before{
 }
 
 
-input[type="radio"]:checked + label:after{
+input[type="radio"]:checked + label:after{ /*afterは選択された後*/
   content: "";
   display: block;
   position: absolute;
