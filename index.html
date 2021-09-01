@@ -34,6 +34,8 @@
   <div id="face-letter-slot">
   <h1 id="h1-2">顔文字を制作しよう！</h1>
   
+  <!-- 顔文字切り替え -->
+
   <form name="radios">
   <input type="radio" name="feel" id="random" value="random" checked>
   <label for="random">ランダム</label>
@@ -46,9 +48,14 @@
  
   <input type="radio" name="feel" id="angry" value="angry">
   <label for="angry">怒り</label>
-  
   </form>
+
+  <!-- 作成ボタン -->
+
   <p><button id="face-letter-slot-btn">作成ボタン</button></p>
+
+  <!-- 概要 -->
+
   <p><button id="face-letter-tutorial-btn">概要</button></p>
   <div id="face-letter-tutorial" style="display: none;">
   <p id="tutorial-1">ランダムに顔文字を作ってくれるボタンです。</p>
@@ -82,7 +89,9 @@
   <button id="close-btn">閉じる</button>
   </p>
   </div>
- 
+  
+  <!-- 結果表示欄 -->
+
   <div id="slot-result">
   <div id="result-area">
   どんな顔文字が出るかな?<br>
@@ -92,7 +101,9 @@
   </div>
     <button id="copy">コピー</button>コピーボタンは時間がなくて未実装
   </div>
- 
+
+  <!-- 顔文字登録 -->
+
   <div id="face-letter-register">
   <h1>顔文字 登録( ^^) _U~~</h1>
   <p>まず、出てきた顔文字のうち気に入らない顔文字を削除します。</p>
@@ -104,11 +115,16 @@
   <button id="reset">リセット</button>
   <p>(スマホ版だと機種依存文字ではなくても文字化けする可能性があります)</p>
   <p>再度顔文字を登録するにはリセットボタンを押します。</p>
+
   <!-- ツイートボタン -->
+
   <a href="https://twitter.com/intent/tweet?button_hashtag=気に入った顔文字&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="meが気に入った顔文字は、" data-show-count="false">Tweet #気に入った顔文字</a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   </div>
+
+  <!-- 今日の顔文字 -->
+
   <article>
     <p id="today"></p>
     <h1>今日の顔文字</h1>
@@ -116,18 +132,22 @@
     <p id="today-kaomoji"></p>
   </article>
   </main>
+
   <div id="line-2"></div>
+
   <footer>
-    <!-- <div id="smalls"> -->
+
       <small>&copy; ふーちん 2021</small><br>
       <small>N予備校 動くWebページコンテスト2021夏</small><br>
       <small>顔文字 制作!(^^)!
         <a href="./logo.png" target="_blank"><img src="logo.png" alt="顔文字制作!(^^)!のロゴ" width="40px">
         </a>
       </small>
-    <!-- </div> -->
+      
   </footer>
+
   <!-- JSの読み込み -->
+
   <script src="js/face-letter.js"></script>
   <script src="js/btn.js"></script>
   <script src="js/today_kaomoji.js"></script>
