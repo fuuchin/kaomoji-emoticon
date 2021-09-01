@@ -6,7 +6,7 @@ h2 {
   padding-top: 10px;
   border-top: 1px solid #ddd;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eee; /*h2タグのしたに罫線*/
+  border-bottom: 1px solid #eee; /*h2タグの下に罫線*/
 }
 
 a {
