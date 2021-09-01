@@ -6,7 +6,7 @@ header > h1 {
 }
 
 #head-logo {
-  text-decoration: none;
+  text-decoration: none; /*aタグ(ロゴ)の下線をなくす*/
 }
 
 #how-to-use {
