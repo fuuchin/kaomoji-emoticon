@@ -2,7 +2,7 @@
 const id = id => document.getElementById(id); //[document.getElementById]を[id]に省略
 
 const tutorialBtn = id('face-letter-tutorial-btn'); //使い方ボタン
-const closeBtn = id('close-btn'); //使い方を閉じるボタン
+const closeBtn    = id('close-btn'); //使い方を閉じるボタン
 
 
 tutorialBtn.onclick = () => {
@@ -24,7 +24,7 @@ function save() {
 
   // ダウンロード用のaタグを作る
   const a = document.createElement('a');
-  a.href =  URL.createObjectURL(blob);
+  a.href = URL.createObjectURL(blob);
   const registerName = id('register-name').value; // ファイル名
   a.download = registerName + '.txt';
   a.click(); // 作成したダウンロード用のaタグをjavascript上でクリックする
@@ -156,7 +156,8 @@ slotBtn.onclick = () => {
 }
 
 faceLetterTxt.oninput = () => {
-  slotBtn.style.display = 'none';
+  slotBtn.style.display = 'none'; // 登録する顔文字の入力欄をいじった後に作成ボタンを押すと反応しないので
+  //                                 作成ボタンを消し、登録してからリセットボタンを押すと作成ボタンが現れる。
 }
 
 let copyBtn = id('copy');
@@ -164,4 +165,4 @@ copyBtn.onclick = () => {
   copy();
 }
 
-console.log('%cコピーボタンは時間がなくて未実装', 'color: red; font-weight: bold; font-size: large');
+console.log('%cコピーボタンは時間がなくて未実装', 'color: red; font-weight: bold; font-size: large; text-decoration: underline;');
